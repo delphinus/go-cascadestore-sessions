@@ -6,22 +6,22 @@ import (
 	gorillaSessions "github.com/gorilla/sessions"
 )
 
-// DatastoreStore is a datastore version of xxxStore
-type DatastoreStore interface {
+// CascadestoreStore is a datastore version of xxxStore
+type CascadestoreStore interface {
 	sessions.Store
 }
 
-// NewDatastoreStore returns DatastoreStore instances
-func NewDatastoreStore(secret []byte) DatastoreStore {
-	return &datastoreStore{cascadestore.NewCascadeStore(cascadestore.DistributedBackends, secret)}
+// NewCascadestoreStore returns CascadestoreStore instances
+func NewCascadestoreStore(secret []byte) CascadestoreStore {
+	return &cascadestoreStore{cascadestore.NewCascadeStore(cascadestore.DistributedBackends, secret)}
 }
 
-type datastoreStore struct {
+type cascadestoreStore struct {
 	*cascadestore.CascadeStore
 }
 
 // Options can set options
-func (c *datastoreStore) Options(options sessions.Options) {
+func (c *cascadestoreStore) Options(options sessions.Options) {
 	c.CascadeStore.Options = &gorillaSessions.Options{
 		Path:     options.Path,
 		Domain:   options.Domain,
