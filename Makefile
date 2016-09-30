@@ -8,3 +8,6 @@ gom: ## Install gom
 
 install: gom ## Install packages for dependencies
 	gom install
+
+update: gom ## Update packages for dependencies
+	gom install -u
