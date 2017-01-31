@@ -1,0 +1,65 @@
+hash: 8375bdabccf947699a837212d8777b9c9887bcdb8366839ef16e8151cad62d91
+updated: 2017-01-31T09:16:24.010149632+09:00
+imports:
+- name: github.com/boj/redistore
+  version: fc113767cd6b051980f260d6dbe84b2740c46ab0
+- name: github.com/dsoprea/go-appengine-sessioncascade
+  version: 446e702d6b6c19093f43e7d1672d997f6758f22d
+- name: github.com/dsoprea/go-logging
+  version: 9d32002911ed4c4760aa7b44c9ed898e4159d14b
+- name: github.com/garyburd/redigo
+  version: 908534c8b97586a4597e3fa195875d2d26502b97
+  subpackages:
+  - internal
+  - redis
+- name: github.com/gin-gonic/contrib
+  version: 4d2dccc9a4541014fec054e483cc76609b97fb16
+  subpackages:
+  - sessions
+- name: github.com/gin-gonic/gin
+  version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
+  subpackages:
+  - binding
+  - render
+- name: github.com/go-errors/errors
+  version: 8fa88b06e5974e97fbf9899a7f86a344bfd1f105
+- name: github.com/golang/protobuf
+  version: 8ee79997227bf9b34611aee7946ae64735e6fd93
+  subpackages:
+  - proto
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/securecookie
+  version: fa5329f913702981df43dcb2a380bac429c810b5
+- name: github.com/gorilla/sessions
+  version: ca9ada44574153444b00d3fd9c8559e4cc95f896
+- name: github.com/manucorporat/sse
+  version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
+- name: github.com/mattn/go-isatty
+  version: 30a891c33c7cde7b02a981314b4228ec99380cca
+- name: golang.org/x/net
+  version: f2499483f923065a842d38eb4c7f1927e6fc6e6d
+  subpackages:
+  - context
+- name: golang.org/x/sys
+  version: d75a52659825e75fff6158388dddc6a5b04f9ba5
+  subpackages:
+  - unix
+- name: google.golang.org/appengine
+  version: a2c54d2174c17540446e0ced57d9d459af61bc1c
+  subpackages:
+  - datastore
+  - internal
+  - internal/app_identity
+  - internal/base
+  - internal/datastore
+  - internal/log
+  - internal/memcache
+  - internal/modules
+  - internal/remote_api
+  - memcache
+- name: gopkg.in/go-playground/validator.v8
+  version: c193cecd124b5cc722d7ee5538e945bdb3348435
+- name: gopkg.in/yaml.v2
+  version: 4c78c975fe7c825c6d1466c42be594d1d6f3aba6
+testImports: []

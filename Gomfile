@@ -1,3 +1,0 @@
-gom 'github.com/dsoprea/go-appengine-sessioncascade'
-gom 'github.com/gin-gonic/gin'
-gom 'github.com/gorilla/sessions'

@@ -1,0 +1,8 @@
+package: github.com/delphinus/go-cascadestore-sessions
+import:
+- package: github.com/dsoprea/go-appengine-sessioncascade
+- package: github.com/gin-gonic/contrib
+  subpackages:
+  - sessions
+- package: github.com/gorilla/sessions
+  version: ^1.1.0
