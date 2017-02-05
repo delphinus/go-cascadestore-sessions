@@ -6,23 +6,13 @@ import (
 	gorillaSessions "github.com/gorilla/sessions"
 )
 
-// CascadestoreStore is a datastore version of xxxStore
-type CascadestoreStore interface {
-	sessions.Store
-	SetKeyPrefix(string)
-}
-
-// NewCascadestoreStore returns CascadestoreStore instances
-func NewCascadestoreStore(keyPairs ...[]byte) CascadestoreStore {
-	return &cascadestoreStore{cascadestore.NewCascadeStore(cascadestore.DistributedBackends, keyPairs...)}
-}
-
-type cascadestoreStore struct {
+// CascadestoreStore means a wrapper of CascadeStore
+type CascadestoreStore struct {
 	*cascadestore.CascadeStore
 }
 
 // Options can set options
-func (c *cascadestoreStore) Options(options sessions.Options) {
+func (c *CascadestoreStore) Options(options sessions.Options) {
 	c.CascadeStore.Options = &gorillaSessions.Options{
 		Path:     options.Path,
 		Domain:   options.Domain,
@@ -30,4 +20,9 @@ func (c *cascadestoreStore) Options(options sessions.Options) {
 		Secure:   options.Secure,
 		HttpOnly: options.HttpOnly,
 	}
+}
+
+// NewCascadestoreStore returns CascadestoreStore instances
+func NewCascadestoreStore(keyPairs ...[]byte) *CascadestoreStore {
+	return &CascadestoreStore{cascadestore.NewCascadeStore(cascadestore.DistributedBackends, keyPairs...)}
 }
