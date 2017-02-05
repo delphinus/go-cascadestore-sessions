@@ -12,8 +12,8 @@ type CascadestoreStore interface {
 }
 
 // NewCascadestoreStore returns CascadestoreStore instances
-func NewCascadestoreStore(secret []byte) CascadestoreStore {
-	return &cascadestoreStore{cascadestore.NewCascadeStore(cascadestore.DistributedBackends, secret)}
+func NewCascadestoreStore(keyPairs ...[]byte) CascadestoreStore {
+	return &cascadestoreStore{cascadestore.NewCascadeStore(cascadestore.DistributedBackends, keyPairs...)}
 }
 
 type cascadestoreStore struct {
