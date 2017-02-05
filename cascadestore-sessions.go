@@ -9,6 +9,7 @@ import (
 // CascadestoreStore is a datastore version of xxxStore
 type CascadestoreStore interface {
 	sessions.Store
+	SetKeyPrefix(string)
 }
 
 // NewCascadestoreStore returns CascadestoreStore instances
