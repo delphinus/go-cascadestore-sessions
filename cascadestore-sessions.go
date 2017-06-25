@@ -2,7 +2,7 @@ package cascadestoreSessions
 
 import (
 	"github.com/dsoprea/go-appengine-sessioncascade"
-	"github.com/gin-gonic/contrib/sessions"
+	"github.com/gin-contrib/sessions"
 	gorillaSessions "github.com/gorilla/sessions"
 )
 

@@ -1,21 +1,25 @@
-hash: 8375bdabccf947699a837212d8777b9c9887bcdb8366839ef16e8151cad62d91
-updated: 2017-01-31T09:16:24.010149632+09:00
+hash: 6c1a08d1f788ab5b1ff8d55a28fde29281bf2e4b718cadf2cd7d18c153c3f144
+updated: 2017-06-25T22:21:49.094788269+09:00
 imports:
 - name: github.com/boj/redistore
   version: fc113767cd6b051980f260d6dbe84b2740c46ab0
+- name: github.com/bradfitz/gomemcache
+  version: 1952afaa557dc08e8e0d89eafab110fb501c1a2b
+  subpackages:
+  - memcache
+- name: github.com/bradleypeabody/gorilla-sessions-memcache
+  version: 75ee37df8664a47cd5d9eb84d41e1f2b08086893
 - name: github.com/dsoprea/go-appengine-sessioncascade
   version: 446e702d6b6c19093f43e7d1672d997f6758f22d
 - name: github.com/dsoprea/go-logging
   version: 9d32002911ed4c4760aa7b44c9ed898e4159d14b
 - name: github.com/garyburd/redigo
-  version: 908534c8b97586a4597e3fa195875d2d26502b97
+  version: 0708def8b0cf3a05acdf44a7f28b864c2958921d
   subpackages:
   - internal
   - redis
-- name: github.com/gin-gonic/contrib
-  version: 4d2dccc9a4541014fec054e483cc76609b97fb16
-  subpackages:
-  - sessions
+- name: github.com/gin-contrib/sessions
+  version: 447fdfad36b791744edb51dee50ab1e1a24384d4
 - name: github.com/gin-gonic/gin
   version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
   subpackages:
@@ -24,21 +28,23 @@ imports:
 - name: github.com/go-errors/errors
   version: 8fa88b06e5974e97fbf9899a7f86a344bfd1f105
 - name: github.com/golang/protobuf
-  version: 8ee79997227bf9b34611aee7946ae64735e6fd93
+  version: 2402d76f3d41f928c7902a765dfc872356dd3aad
   subpackages:
   - proto
 - name: github.com/gorilla/context
   version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
 - name: github.com/gorilla/securecookie
-  version: fa5329f913702981df43dcb2a380bac429c810b5
+  version: 667fe4e3466a040b780561fe9b51a83a3753eefc
 - name: github.com/gorilla/sessions
   version: ca9ada44574153444b00d3fd9c8559e4cc95f896
+- name: github.com/kidstuff/mongostore
+  version: 256d65ac5b0e35e7c5ebb3f175c0bed1e5c2b253
 - name: github.com/manucorporat/sse
   version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
 - name: github.com/mattn/go-isatty
-  version: 30a891c33c7cde7b02a981314b4228ec99380cca
+  version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
 - name: golang.org/x/net
-  version: f2499483f923065a842d38eb4c7f1927e6fc6e6d
+  version: f315505cf3349909cdf013ea56690da34e96a451
   subpackages:
   - context
 - name: golang.org/x/sys
@@ -46,7 +52,7 @@ imports:
   subpackages:
   - unix
 - name: google.golang.org/appengine
-  version: a2c54d2174c17540446e0ced57d9d459af61bc1c
+  version: 150dc57a1b433e64154302bdc40b6bb8aefa313a
   subpackages:
   - datastore
   - internal
@@ -60,6 +66,13 @@ imports:
   - memcache
 - name: gopkg.in/go-playground/validator.v8
   version: c193cecd124b5cc722d7ee5538e945bdb3348435
+- name: gopkg.in/mgo.v2
+  version: 3f83fa5005286a7fe593b055f0d7771a7dce4655
+  subpackages:
+  - bson
+  - internal/json
+  - internal/sasl
+  - internal/scram
 - name: gopkg.in/yaml.v2
-  version: 4c78c975fe7c825c6d1466c42be594d1d6f3aba6
+  version: a5b47d31c556af34a302ce5d659e6fea44d90de0
 testImports: []
